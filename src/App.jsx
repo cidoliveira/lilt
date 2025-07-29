@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import Feed from "./components/Feed";
 
 function App() {
   const [modal, setModal] = useState(false);
@@ -40,7 +39,7 @@ Frees me from the night`,
             : "hidden"
         }
       >
-        <div className="bg-[#FFFBFB] p-6 rounded-md shadow-lg flex flex-col w-[90%]">
+        <div className="bg-[#FFFBFB] p-6 rounded-md shadow-lg flex flex-col w-100 sm:w-150 ">
           <h3 className="text-2xs font-[Poppins] text-[#BBA1A1] mb-4">
             New Poem
           </h3>
@@ -103,15 +102,17 @@ Frees me from the night`,
           {[...posts].reverse().map((post, index) => (
             <div
               key={index}
-              className="p-4 bg-white rounded shadow max-h-80 overflow-hidden"
+              className="p-4 bg-white rounded shadow max-h-80 overflow-hidden relative"
             >
               <h2 className="font-[Cardo] text-xl font-bold mb-2">
                 {post.title}
               </h2>
-              <p className="font-[Cardo] mb-2 whitespace-pre-line max-h-40 overflow-y-auto">
+              <p className="font-[Cardo] mb-10 whitespace-pre-line max-h-40 overflow-y-auto">
                 {post.content}
               </p>
-              <span className="text-sm text-[#BBA1A1]">by {post.author}</span>
+              <span className="absolute bottom-5 text-sm text-[#BBA1A1]">
+                by {post.author}
+              </span>
             </div>
           ))}
         </div>
