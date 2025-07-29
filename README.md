@@ -1,12 +1,44 @@
-# React + Vite
+# Lilt 🪶
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A minimal, pastel‑themed poetry feed focused on reading and writing short poems on a single page.
 
-Currently, two official plugins are available:
+**Live demo:** https://lilt.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Status:** Front‑end is live. **Backend is in progress** (API & persistence coming soon).
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+- Timeline‑style poem feed
+- Modal to **write a new poem**
+- Clean, distraction‑free UI
+- Responsive layout (mobile‑first)
+- Front‑end only for now (temporary)
+
+---
+
+## 🧰 Tech Stack
+
+- **React + Vite** for development and build
+- **Tailwind CSS** for styling
+- **ESLint** for code quality
+
+---
+
+## 🚀 Getting Started
+
+> Prerequisites: **Node 18+** and **npm**
+
+```bash
+# 1) Clone
+git clone https://github.com/cidoliveira/lilt
+cd lilt
+
+# 2) Install dependencies
+npm install
+
+# 3) Start dev server
+npm run dev
+# Open the URL shown by Vite (e.g., http://localhost:5173)
+```
