@@ -54,12 +54,15 @@ Frees me from the night`,
               className="font-[Inria] w-full border px-3 py-2 rounded mb-2 border-[#FAECEC] bg-[#FFFFFF]"
             />
             <textarea
+              cols={20}
+              rows={5}
+              maxlength={400}
               required
               placeholder="Write your poem..."
               value={content}
               onChange={(e) => setContent(e.target.value)}
-              rows={8}
-              className="font-[Inria] w-full border px-3 py-2 mb-2 rounded border-[#FAECEC] bg-[#FFFFFF] "
+              className="font-[Inria] w-full border px-3 py-2 mb-2 rounded
+            border-[#FAECEC] bg-[#FFFFFF] "
             />
             <input
               required
@@ -96,13 +99,16 @@ Frees me from the night`,
         </button>
       </header>
       <div className="w-full h-full bg-gradient-to-b from-[#FEF6F7] to-[#FCEFF9] overflow-auto">
-        <div className="p-5 flex flex-col-reverse">
-          {posts.map((post, index) => (
-            <div key={index} className="mb-6 p-4 bg-white rounded shadow">
+        <div className="p-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+          {[...posts].reverse().map((post, index) => (
+            <div
+              key={index}
+              className="p-4 bg-white rounded shadow max-h-80 overflow-hidden"
+            >
               <h2 className="font-[Cardo] text-xl font-bold mb-2">
                 {post.title}
               </h2>
-              <p className="font-[Cardo] mb-2 whitespace-pre-line">
+              <p className="font-[Cardo] mb-2 whitespace-pre-line max-h-40 overflow-y-auto">
                 {post.content}
               </p>
               <span className="text-sm text-[#BBA1A1]">by {post.author}</span>
